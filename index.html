@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="Support Diverse Youth NI by bank transfer. Copy our HSBC bank details.">
+<title>Support Diverse Youth NI | Bank Transfer</title>
+<style>
+:root{color-scheme:light;--ink:#151923;--muted:#667085;--line:#e6e8ec;--paper:#f5f6f8}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+.wrap{width:min(100% - 32px,720px);margin:auto;padding:48px 0 32px}header{text-align:center;margin-bottom:28px}
+.mark{width:52px;height:52px;margin:0 auto 16px;border-radius:16px;display:grid;place-items:center;background:#111827;color:white;font-weight:800;font-size:19px}
+.eyebrow{color:var(--muted);text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:750}
+h1{font-size:clamp(2rem,6vw,3.1rem);line-height:1.08;letter-spacing:-.055em;margin:10px 0 12px}
+.intro{color:#596273;max-width:550px;margin:auto;font-size:1.04rem}
+.card{background:white;border:1px solid var(--line);border-radius:22px;padding:clamp(20px,5vw,34px);box-shadow:0 12px 34px #1018280f}
+.card h2{margin:0 0 5px;font-size:1.35rem}.hint{margin:0 0 22px;color:var(--muted);font-size:.94rem}
+.detail{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 0;border-top:1px solid var(--line)}
+.label{display:block;color:var(--muted);font-size:.8rem;margin-bottom:3px}.value{font-size:1rem;font-weight:700;overflow-wrap:anywhere}
+button{border:1px solid #d5d9e1;background:white;color:#202939;border-radius:10px;padding:9px 13px;font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;white-space:nowrap}
+button:hover{background:#f2f4f7}button:focus-visible,a:focus-visible{outline:3px solid #8098f9;outline-offset:3px}
+.steps{margin-top:22px;padding:20px 22px;background:#f8fafc;border:1px solid var(--line);border-radius:16px}
+.steps h3{margin:0 0 8px;font-size:1rem}.steps ol{margin:0;padding-left:20px;color:#596273;font-size:.92rem}.steps li+li{margin-top:5px}
+.notice{margin-top:18px;padding:14px 16px;border-left:3px solid #475467;background:#f8fafc;color:#475467;border-radius:8px;font-size:.86rem}
+.thanks{text-align:center;padding:26px 10px 8px}.thanks strong{display:block;font-size:1.08rem}.thanks span{color:var(--muted);font-size:.9rem}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 10px 0}footer a{color:inherit}
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,16px);background:#111827;color:white;padding:10px 16px;border-radius:999px;font-size:.9rem;opacity:0;pointer-events:none;transition:.2s}
+#toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:420px){.detail{gap:8px}button{padding:8px 10px}.value{font-size:.94rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+</style></head>
+<body><main class="wrap">
+<header><div class="mark" aria-hidden="true">DY</div><div class="eyebrow">Diverse Youth NI</div>
+<h1>Support our work.</h1><p class="intro">Your contribution helps us continue creating opportunities and support for young people across Northern Ireland. You can contribute any amount by bank transfer.</p></header>
+<section class="card" aria-labelledby="transfer-heading"><h2 id="transfer-heading">Make a bank transfer</h2><p class="hint">Copy the details below into your banking app.</p>
+<div class="detail"><div><span class="label">Account name</span><span class="value">Diverse Youth NI</span></div><button type="button" data-copy="Diverse Youth NI">Copy</button></div>
+<div class="detail"><div><span class="label">Bank</span><span class="value">HSBC UK</span></div><button type="button" data-copy="HSBC UK">Copy</button></div>
+<div class="detail"><div><span class="label">Sort code</span><span class="value">40-20-55</span></div><button type="button" data-copy="402055">Copy</button></div>
+<div class="detail"><div><span class="label">Account number</span><span class="value">70384682</span></div><button type="button" data-copy="70384682">Copy</button></div>
+<div class="detail"><div><span class="label">Payment reference</span><span class="value">Website Support Funding</span></div><button type="button" data-copy="Website Support Funding">Copy</button></div>
+<div class="steps"><h3>How to send your contribution</h3><ol>
+<li>Copy the account details above.</li><li>Open your own banking app and choose to make a bank transfer.</li>
+<li>Enter the details, choose the amount you wish to give, and use the reference shown.</li>
+<li>Check the recipient and all payment details carefully before authorising the transfer.</li></ol></div>
+<div class="notice"><strong>Please note:</strong> This page displays bank details only. It does not initiate, open, or prefill a bank transfer. You must enter the details and payment amount yourself in your banking app.</div>
+<div class="thanks"><strong>Thank you for supporting Diverse Youth NI.</strong><span>Every contribution is appreciated.</span></div></section>
+<footer><a href="https://diverseyouthni.com/" target="_blank" rel="noopener noreferrer">Visit diverseyouthni.com</a></footer>
+</main><div id="toast" role="status" aria-live="polite">Copied to clipboard</div>
+<script>
+const toast=document.getElementById('toast');let timer;
+async function copyText(value){try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value)}else{const el=document.createElement('textarea');el.value=value;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();const ok=document.execCommand('copy');el.remove();if(!ok)throw Error('copy failed')}
+toast.textContent='Copied: '+value;toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),1800)
+}catch{toast.textContent='Copy unavailable — please select and copy the detail.';toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),2600)}}
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>copyText(b.dataset.copy)));
+</script></body></html>
